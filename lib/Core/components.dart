@@ -12,7 +12,7 @@ class Components {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        height: 55,
+        height: 40,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(30),
@@ -20,11 +20,7 @@ class Components {
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            icon,
-            const SizedBox(width: 10),
-            child,
-          ],
+          children: [icon, const SizedBox(width: 10), child],
         ),
       ),
     );
@@ -33,7 +29,7 @@ class Components {
   Widget customButton({
     required Widget child,
     double width = double.infinity,
-    double height = 60,
+    double height = 50,
     required Function() onTap,
     required Color color,
   }) {
@@ -122,6 +118,22 @@ class Components {
             ),
           ),
         ),
+      ],
+    );
+  }
+
+  Widget signInWithDivider() {
+    return Row(
+      children: [
+        Expanded(child: Divider(thickness: 1, color: Colors.black)),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Text(
+            'Sign in with',
+            style: TextStyle(color: Colors.grey[900], fontSize: 14),
+          ),
+        ),
+        Expanded(child: Divider(thickness: 1, color: Colors.black)),
       ],
     );
   }
