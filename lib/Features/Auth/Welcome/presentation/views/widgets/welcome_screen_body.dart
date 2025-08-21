@@ -44,7 +44,9 @@ class WelcomeScreenBody extends StatelessWidget {
             'Start with email',
             style: TextStyle(color: Colors.white, fontSize: 17),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, '/LoginScreen');
+          },
           color: Colors.black,
         ),
         SizedBox(height: 40),
@@ -72,33 +74,7 @@ class WelcomeScreenBody extends StatelessWidget {
           icon: Icon(FontAwesomeIcons.google, color: Colors.red),
           border: false,
         ),
-        SizedBox(height: 20),
-
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Already have an account?',
-              style: TextStyle(color: Colors.grey[900], fontSize: 15),
-            ),
-            SizedBox(width: 5),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, '/LoginScreen');
-              },
-              child: Text(
-                'Sign in',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  decoration: TextDecoration.underline,
-                  decorationColor: Colors.white,
-                ),
-              ),
-            ),
-          ],
-        ),
+        SizedBox(height: 30),
       ],
     );
   }

@@ -1,8 +1,9 @@
-import 'package:delivery_app/Features/Auth/Login/presentation/views/widgets/login_screen_body.dart';
+import 'package:delivery_app/Features/Auth/Sign%20Up/presentation/views/widgets/sign_up_screen_body.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
+  final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -10,7 +11,8 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: LoginScreenBody(
+      body: SignUpScreenBody(
+        nameController: nameController,
         emailController: emailController,
         passwordController: passwordController,
       ),

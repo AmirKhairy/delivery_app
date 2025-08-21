@@ -1,4 +1,8 @@
 import 'package:delivery_app/Features/Auth/Login/presentation/views/login_screen.dart';
+import 'package:delivery_app/Features/Auth/Reset%20Password/presentation/views/forgot_password_screen.dart';
+import 'package:delivery_app/Features/Auth/Reset%20Password/presentation/views/reset_password_screen.dart';
+import 'package:delivery_app/Features/Auth/Reset%20Password/presentation/views/verification_code_screen.dart';
+import 'package:delivery_app/Features/Auth/Sign%20Up/presentation/views/sign_up_screen.dart';
 import 'package:delivery_app/Features/Auth/Welcome/presentation/views/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +21,11 @@ class MyApp extends StatelessWidget {
       initialRoute: '/WelcomeScreen',
       routes: {
         '/WelcomeScreen': (context) => const WelcomeScreen(),
-        '/LoginScreen': (context) => const LoginScreen(),
+        '/LoginScreen': (context) => LoginScreen(),
+        '/SignUpScreen': (context) => SignUpScreen(),
+        '/ForgotPasswordScreen': (context) => ForgotPasswordScreen(),
+        '/VerificationCodeScreen': (context) => VerificationCodeScreen(),
+        '/ResetPasswordScreen': (context) => ResetPasswordScreen(),
       },
     );
   }

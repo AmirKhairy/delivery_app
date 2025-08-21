@@ -125,7 +125,7 @@ class Components {
   Widget signInWithDivider() {
     return Row(
       children: [
-        Expanded(child: Divider(thickness: 1, color: Colors.black)),
+        Expanded(child: Divider(thickness: 1, color: Colors.black, indent: 15)),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Text(
@@ -133,7 +133,9 @@ class Components {
             style: TextStyle(color: Colors.grey[900], fontSize: 14),
           ),
         ),
-        Expanded(child: Divider(thickness: 1, color: Colors.black)),
+        Expanded(
+          child: Divider(thickness: 1, color: Colors.black, endIndent: 15),
+        ),
       ],
     );
   }
