@@ -1,3 +1,4 @@
+import 'package:delivery_app/Core/Services/Shared%20Prefs/shared_preferences_manager.dart';
 import 'package:delivery_app/Features/Auth/Login/presentation/views/login_screen.dart';
 import 'package:delivery_app/Features/Auth/Reset%20Password/presentation/views/forgot_password_screen.dart';
 import 'package:delivery_app/Features/Auth/Reset%20Password/presentation/views/reset_password_screen.dart';
@@ -7,6 +8,10 @@ import 'package:delivery_app/Features/Auth/Welcome/presentation/views/welcome_sc
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  PrefsManager.init();
+
   runApp(MyApp());
 }
 
