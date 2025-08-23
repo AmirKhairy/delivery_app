@@ -46,8 +46,8 @@ class AppDioError implements Exception {
     switch (statusCode) {
       case 400:
       case 401:
-        print("IM HERE${error["message"]}");
-        return error["message"];
+        print("IM HERE${error["msg"]}");
+        return error["msg"];
       case 403:
         return 'Forbidden';
       case 404:

@@ -112,7 +112,7 @@ class LoginScreenBody extends StatelessWidget {
                   listener: (context, state) {
                     if (state is LoginSuccessState) {
                       Fluttertoast.showToast(
-                        msg: 'Login successfully',
+                        msg: state.message,
                         backgroundColor: Colors.green,
                         textColor: Colors.white,
                       );

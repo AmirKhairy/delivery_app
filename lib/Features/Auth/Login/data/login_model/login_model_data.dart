@@ -1,11 +1,11 @@
-class LoginModel {
+class LoginModelData {
   String? accessToken;
   String? refreshToken;
   String? tokenType;
   int? userId;
   String? email;
 
-  LoginModel({
+  LoginModelData({
     this.accessToken,
     this.refreshToken,
     this.tokenType,
@@ -13,7 +13,7 @@ class LoginModel {
     this.email,
   });
 
-  factory LoginModel.fromJson(Map<String, dynamic> json) => LoginModel(
+  factory LoginModelData.fromJson(Map<String, dynamic> json) => LoginModelData(
     accessToken: json['access_token'] as String?,
     refreshToken: json['refresh_token'] as String?,
     tokenType: json['token_type'] as String?,
