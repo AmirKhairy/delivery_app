@@ -45,17 +45,26 @@ class AppDioError implements Exception {
   String _handleError(int? statusCode, dynamic error) {
     switch (statusCode) {
       case 400:
+        print("IM HERE 400 ${error["msg"]}");
+        return error["msg"];
       case 401:
-        print("IM HERE${error["msg"]}");
+        print("IM HERE 401 ${error["msg"]}");
         return error["msg"];
       case 403:
-        return 'Forbidden';
+        print("IM HERE 403 ${error["msg"]}");
+        return error["msg"];
       case 404:
-        return 'Not Found';
+        print("IM HERE 404 ${error["msg"]}");
+        return error["msg"];
+      case 422:
+        print("IM HERE 422 ${error["data"][0]["message"]}");
+        return error["msg"];
       case 500:
-        return 'Internal server error';
+        print("IM HERE 500 ${error["msg"]}");
+        return error["msg"];
       case 502:
-        return 'Bad gateway';
+        print("IM HERE 502 ${error["msg"]}");
+        return error["msg"];
       default:
         return 'Oops something went wrong';
     }

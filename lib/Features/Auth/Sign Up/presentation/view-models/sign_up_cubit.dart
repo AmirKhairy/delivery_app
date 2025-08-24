@@ -50,7 +50,9 @@ class SignUpCubit extends Cubit<SignUpStates> {
       }
     } on DioException catch (e) {
       print("DioException: ${e.response?.data}");
-      emit(SignUpErrorState(error: '${e.response?.data["data"][0]["message"]}'));
+      emit(
+        SignUpErrorState(error: '${e.response?.data["data"][0]["message"]}'),
+      );
     } catch (e) {
       print("Unknown error: $e");
       emit(SignUpErrorState(error: e.toString()));
